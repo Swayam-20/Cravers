@@ -1,23 +1,23 @@
 # Cravers Full-Stack Project
 
-A full-stack food delivery web application with a customer-facing frontend, a Node.js and Express backend, and a MongoDB database. The backend code provided in this project handles user authentication, food item management, file uploads, and shopping cart operations using Mongoose models and JWT-based authentication.[file:198][file:199][file:200][file:201][file:202][file:203][file:204][file:205][file:206][file:207]
+A full-stack food delivery web application with a customer-facing frontend, a Node.js and Express backend, and a MongoDB database. The backend code provided in this project handles user authentication, food item management, file uploads, and shopping cart operations using Mongoose models and JWT-based authentication.
 
 ## Overview
 
-This project is designed as a food ordering platform where users can browse food items, register or log in, add items to a cart, and manage their shopping session. On the admin side, food items can be added with images, listed, and deleted through backend APIs.[file:199][file:200][file:201][file:202][file:203][file:205][file:207]
+This project is designed as a food ordering platform where users can browse food items, register or log in, add items to a cart, and manage their shopping session. On the admin side, food items can be added with images, listed, and deleted through backend APIs.
 
 ## Full-Stack Architecture
 
 ### Frontend
 
-The frontend is intended to be a customer-facing interface that connects with the backend APIs for authentication, menu browsing, and cart management. Based on the backend routes and controllers, the expected frontend modules include user authentication screens, a food listing page, cart page, and admin food management screens.[file:198][file:199][file:200][file:201][file:202][file:203]
+The frontend is intended to be a customer-facing interface that connects with the backend APIs for authentication, menu browsing, and cart management. Based on the backend routes and controllers, the expected frontend modules include user authentication screens, a food listing page, cart page, and admin food management screens.
 
 Typical frontend features:
-- User signup and login forms.[file:201][file:202]
-- Food menu listing page using the food list API.[file:200][file:203]
-- Add to cart and remove from cart actions using protected cart endpoints.[file:198][file:199]
-- Admin form for adding food items with image upload.[file:200][file:203][file:206]
-- Food deletion option for admin management.[file:200][file:203]
+- User signup and login forms.
+- Food menu listing page using the food list API.
+- Add to cart and remove from cart actions using protected cart endpoints.
+- Admin form for adding food items with image upload.
+- Food deletion option for admin management.
 
 Suggested frontend stack:
 - React.js
@@ -28,54 +28,54 @@ Suggested frontend stack:
 
 ### Backend
 
-The backend is built with Node.js, Express.js, MongoDB, and Mongoose. It provides APIs for user registration, login, food management, and cart functionality.[file:198][file:199][file:200][file:201][file:202][file:203][file:204]
+The backend is built with Node.js, Express.js, MongoDB, and Mongoose. It provides APIs for user registration, login, food management, and cart functionality.
 
 Backend responsibilities:
-- Handle user registration and login with validation and hashed passwords.[file:201][file:202]
-- Generate JWT tokens for authenticated sessions.[file:202]
-- Add, list, and delete food items.[file:200][file:203]
-- Upload and store food images using Multer.[file:200][file:203][file:206]
-- Maintain cart data inside the user document.[file:199][file:205]
-- Connect to MongoDB using a dedicated database connection utility.[file:204]
+- Handle user registration and login with validation and hashed passwords.
+- Generate JWT tokens for authenticated sessions.
+- Add, list, and delete food items.
+- Upload and store food images using Multer.
+- Maintain cart data inside the user document.
+- Connect to MongoDB using a dedicated database connection utility.
 
 ### Database
 
-The project uses MongoDB as the primary database and Mongoose as the ODM layer. The current data model includes a `User` collection and a `Food` collection.[file:204][file:205][file:207]
+The project uses MongoDB as the primary database and Mongoose as the ODM layer. The current data model includes a `User` collection and a `Food` collection.
 
 Database responsibilities:
-- Store user credentials and cart data.[file:205]
-- Store food item details such as name, description, price, category, and image filename.[file:207]
-- Support CRUD operations through Mongoose models and controllers.[file:199][file:203][file:204][file:205][file:207]
+- Store user credentials and cart data.
+- Store food item details such as name, description, price, category, and image filename.
+- Support CRUD operations through Mongoose models and controllers.
 
 ## Features
 
-- User registration with email and password.[file:201][file:202]
-- User login with JWT token creation.[file:201][file:202]
-- Password hashing with bcrypt.[file:202]
-- Food item add, list, and delete APIs.[file:200][file:203]
-- Image upload support with Multer.[file:200][file:203][file:206]
-- Cart item add, remove, and fetch operations.[file:198][file:199]
-- MongoDB database integration using Mongoose.[file:204][file:205][file:207]
-- Authentication-protected cart routes.[file:198]
+- User registration with email and password.
+- User login with JWT token creation.
+- Password hashing with bcrypt.
+- Food item add, list, and delete APIs.
+- Image upload support with Multer.
+- Cart item add, remove, and fetch operations.
+- MongoDB database integration using Mongoose.
+- Authentication-protected cart routes.
 
 ## Project Flow
 
-1. A user registers or logs in through the frontend.[file:201][file:202]
-2. The backend validates the request, hashes passwords during registration, and returns a JWT token in a cookie.[file:202]
-3. The frontend fetches available food items through the food list endpoint.[file:200][file:203]
-4. The user adds items to the cart through protected cart APIs.[file:198][file:199]
-5. Cart data is stored in the user's MongoDB document as an object of item IDs and quantities.[file:199][file:205]
-6. Admin users can add or remove food items, including image uploads stored on disk.[file:200][file:203][file:206]
+1. A user registers or logs in through the frontend.
+2. The backend validates the request, hashes passwords during registration, and returns a JWT token in a cookie.
+3. The frontend fetches available food items through the food list endpoint.
+4. The user adds items to the cart through protected cart APIs.
+5. Cart data is stored in the user's MongoDB document as an object of item IDs and quantities.
+6. Admin users can add or remove food items, including image uploads stored on disk.
 
 ## Tech Stack
 
 | Layer | Technology |
 |---|---|
 | Frontend | React.js or any JavaScript UI framework (suggested) |
-| Backend | Node.js, Express.js.[file:198][file:200][file:201] |
-| Database | MongoDB with Mongoose.[file:204][file:205][file:207] |
-| Authentication | JWT, bcrypt.[file:202] |
-| File Upload | Multer.[file:206] |
+| Backend | Node.js, Express.js. |
+| Database | MongoDB with Mongoose. |
+| Authentication | JWT, bcrypt. |
+| File Upload | Multer. |
 
 ## Backend API Endpoints
 
@@ -83,24 +83,24 @@ Database responsibilities:
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | `/api/user/register` | Register a new user.[file:201][file:202] |
-| POST | `/api/user/login` | Login user and receive JWT token cookie.[file:201][file:202] |
+| POST | `/api/user/register` | Register a new user. |
+| POST | `/api/user/login` | Login user and receive JWT token cookie.|
 
 ### Food APIs
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | `/api/food/add` | Add a new food item with image upload.[file:200][file:203][file:206] |
-| GET | `/api/food/list` | Retrieve all food items.[file:200][file:203] |
-| POST | `/api/food/delete` | Delete a food item by id.[file:200][file:203] |
+| POST | `/api/food/add` | Add a new food item with image upload. |
+| GET | `/api/food/list` | Retrieve all food items. |
+| POST | `/api/food/delete` | Delete a food item by id. |
 
 ### Cart APIs
 
 | Method | Endpoint | Description |
 |---|---|---|
-| POST | `/api/cart/add` | Add a food item to cart.[file:198][file:199] |
-| POST | `/api/cart/remove` | Remove a food item from cart.[file:198][file:199] |
-| GET | `/api/cart/items` | Fetch current cart items.[file:198][file:199] |
+| POST | `/api/cart/add` | Add a food item to cart. |
+| POST | `/api/cart/remove` | Remove a food item from cart. |
+| GET | `/api/cart/items` | Fetch current cart items. |
 
 ## Database Schema
 
@@ -115,7 +115,7 @@ Database responsibilities:
 }
 ```
 
-The `User` document stores account details and an object-based cart structure where the keys are food item IDs and the values are quantities.[file:205]
+The `User` document stores account details and an object-based cart structure where the keys are food item IDs and the values are quantities.
 
 ### Food Schema
 
@@ -129,7 +129,7 @@ The `User` document stores account details and an object-based cart structure wh
 }
 ```
 
-The `Food` document stores each menu item's data and the uploaded image filename.[file:207]
+The `Food` document stores each menu item's data and the uploaded image filename.
 
 ## Folder Structure
 
@@ -169,7 +169,7 @@ MONGODB_URL=your_mongodb_connection_string
 JWT_SECRET=your_secret_key
 ```
 
-The backend reads `MONGODB_URL` for the MongoDB connection and `JWT_SECRET` for token generation.[file:202][file:204]
+The backend reads `MONGODB_URL` for the MongoDB connection and `JWT_SECRET` for token generation.
 
 ## Installation
 
@@ -182,9 +182,9 @@ npm run dev
 ```
 
 Before starting the server, make sure:
-- MongoDB connection string is added in `.env`.[file:204]
-- JWT secret is configured.[file:202]
-- `Uploads` directory exists for image storage.[file:206]
+- MongoDB connection string is added in `.env`.
+- JWT secret is configured.
+- `Uploads` directory exists for image storage.
 
 ### Frontend Setup
 
@@ -212,21 +212,21 @@ Recommended frontend pages for this project:
 - Admin add food page
 - Admin food list management page
 
-These pages align with the backend features already implemented in the project.[file:198][file:199][file:200][file:201][file:202][file:203]
+These pages align with the backend features already implemented in the project.
 
 ## Future Improvements
 
-- Add role-based admin authorization for food management.[file:205]
+- Add role-based admin authorization for food management.
 - Add order placement and checkout functionality.
 - Add payment gateway integration.
 - Add user profile and order history pages.
 - Store uploaded images in cloud storage instead of local disk.
-- Improve API validation and error handling consistency.[file:199][file:202][file:203][file:204]
+- Improve API validation and error handling consistency.
 - Add unit and integration tests.
 - Add Swagger or Postman API documentation.
 
 ## Notes
 
-The attached backend code shows a strong starting structure for a food delivery application, but some controller code appears to need cleanup and standardization before production deployment.[file:199][file:202][file:203][file:204] The README therefore documents both the implemented backend and the intended frontend and database architecture for a complete full-stack version of the project.[file:198][file:199][file:200][file:201][file:202][file:203][file:204][file:205][file:207]
+The attached backend code shows a strong starting structure for a food delivery application, but some controller code appears to need cleanup and standardization before production deployment.The README therefore documents both the implemented backend and the intended frontend and database architecture for a complete full-stack version of the project.
 
 
